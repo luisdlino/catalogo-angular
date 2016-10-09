@@ -1,0 +1,126 @@
+@import 'variables';
+
+
+body {
+	background-color: $cor-preto;
+}
+
+hr {
+	margin: 0;
+    border: 1px solid #F16236;	
+}
+
+.glyphicon {
+	font-size: 16px;
+}
+
+.menu {
+	background-color: $background-cinza;
+	height: 100%;
+	min-height: 70px;
+	padding: 10px;
+	font-size: 28px;
+
+	.form-inline {
+		.form-group, .form-control{
+			display: inline-block!important;
+		    margin-bottom: 0!important;
+		    vertical-align: middle!important;
+		    width: auto;
+		}
+	}
+
+	.glyphicon {
+		right: 35px;
+	}
+}
+
+.conteudo {
+	.container {
+		background-color: $background-branco;
+		height: 100%;
+		padding-bottom: 30px;
+	}
+}
+
+.modal-title {
+	color: $cor-laranja;
+}
+
+.blockCurso {
+	width: 100%;
+    height: 100%;
+    border: 2px solid #67B063;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: 0px 1px 6px -1px;
+
+    .imgCurso {
+
+		cursor: pointer;
+		position: relative;
+
+	    img {
+	    	width: 100%;  	
+	    }    
+
+	    .glyphicon-play-circle {
+	    	color: #fff;
+			position: absolute;
+		    top: 30%;
+		    right: 40%;
+		    font-size: 65px;
+		    opacity: 0.95;    	
+    	    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+		  	-moz-transition: all 0.5s ease; /* Firefox */
+		  	-o-transition: all 0.5s ease; /* IE 9 */
+		  	-ms-transition: all 0.5s ease; /* Opera */
+		  	transition: all 0.5s ease;
+	    }
+
+	    &:hover {
+	    	.glyphicon-play-circle {
+			    -webkit-transform:scale(1.25); /* Safari and Chrome */
+			    -moz-transform:scale(1.25); /* Firefox */
+			    -ms-transform:scale(1.25); /* IE 9 */
+			    -o-transform:scale(1.25); /* Opera */
+			     transform:scale(1.25);
+	    	}
+	    }  	    	
+    }
+
+    .conteudoCurso {
+
+    	    padding: 10px 5px;
+
+		.tituloCurso {
+		    font-size: 18px;
+		    text-align: center;
+		    color: $cor-laranja;
+		    height: 50px; 	
+		    margin-bottom: 10px;
+	    }
+
+	    .infoCurso {
+
+	    	text-align: left;
+    		margin: 0 5px;
+	    	p {
+	    		margin: 0px;
+	    	} 	
+	    }  
+
+	    .rating {
+	    	float: right;
+	    	color: $cor-dourado;
+	    } 
+    }
+
+}
+
+
+@media only screen and (max-width: 480px)  {
+	.search {
+		text-align: left!important;
+	}
+}

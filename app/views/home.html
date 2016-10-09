@@ -1,0 +1,98 @@
+<div class="container">
+
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>Artesanato</h3>
+			<hr/>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="course in courses | filter : 'Artesanato' | filter: test">
+			<div class="blockCurso">
+				<div class="imgCurso" data-toggle="modal" data-target="#{{course.id}}">
+					<img src="{{ course.thumb }}"/>
+					<span class="glyphicon glyphicon-play-circle" />
+				</div>
+				<div class="conteudoCurso text-center">
+					<div class="tituloCurso"><p>{{ course.title }}</p></div>
+					<div class="infoCurso">
+						<p><strong>Autor/es:</strong></p>
+						<p class="">{{ course.author }}</p>
+						<p><strong>Categoria:</strong></p>
+						<p class="">{{ course.category }}<span class="rating"><input type="hidden" value="{{ course.rating }}"/></span></p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="modal fade" id="{{course.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">{{ course.title }}</h4>
+			      </div>	    
+			      <div class="modal-body text-center">
+			        <iframe width="500" height="315" src="{{course.preview_video_url}}">
+					</iframe>
+			      </div>
+			    </div>
+			  </div>
+			</div>			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 ">
+			<h3>Gastronomia</h3>
+			<hr/>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-md-3 col-sm-6 col-xs-12" ng-repeat="course in courses | filter : 'Gastronomia' | filter: test">
+			<div class="blockCurso">
+				<div class="imgCurso" data-toggle="modal" data-target="#{{course.id}}">
+					<img src="{{ course.thumb }}"/>
+					<span class="glyphicon glyphicon-play-circle" />
+				</div>
+				<div class="conteudoCurso text-center">
+					<div class="tituloCurso"><p>{{ course.title }}</p></div>
+					<div class="infoCurso">
+						<p><strong>Autor/es:</strong></p>
+						<p class="">{{ course.author }}</p>
+						<p><strong>Categoria:</strong></p>
+						<p class="">{{ course.category }}<span class="rating"><input type="hidden" value="{{ course.rating }}"/></span></p>
+					</div>
+				</div>
+				<div class="modal fade" id="{{course.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				  <div class="modal-dialog" role="document">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title">{{ course.title }}</h4>
+				      </div>	    
+				      <div class="modal-body text-center">
+				      	<input type="hidden" class="inputVideo" value="{{course.preview_video_url}}"/>
+				        <iframe width="500" height="315" src="{{course.preview_video_url}}">
+						</iframe>
+				      </div>
+				    </div>
+				  </div>
+				</div>					
+			</div>
+		</div>
+	</div>	
+
+</div>
+
+
+<script>
+   $( window ).load(function() {
+      $(".rating input").each(function() {
+        var value = $( this ).val();
+        var i = 0;
+        for (; i < value; i++) { 
+          $( this ).after( "<span class='glyphicon glyphicon-star'/>" )
+        }
+      });      
+   });
+</script>
