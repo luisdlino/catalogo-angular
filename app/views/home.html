@@ -19,7 +19,48 @@
 						<p><strong>Autor/es:</strong></p>
 						<p class="">{{ course.author }}</p>
 						<p><strong>Categoria:</strong></p>
-						<p class="">{{ course.category }}<span class="rating"><input type="hidden" value="{{ course.rating }}"/></span></p>
+						<p class="">{{ course.category }}
+
+							<span class="rating" ng-if="course.rating ==1">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>								
+							</span>
+
+							<span class="rating" ng-if="course.rating ==2">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>								
+							</span>
+
+							<span class="rating" ng-if="course.rating ==3">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>								
+							</span>
+
+							<span class="rating" ng-if="course.rating ==4">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star-empty'/>								
+							</span>
+
+							<span class="rating" ng-if="course.rating ==5">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>								
+							</span>																												
+						</p>
 					</div>
 
 				</div>
@@ -43,7 +84,7 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 ">
-			<h3>Gastronomia</h3>
+			<h3>Gastronomias</h3>
 			<hr/>
 		</div>
 	</div>	
@@ -60,7 +101,48 @@
 						<p><strong>Autor/es:</strong></p>
 						<p class="">{{ course.author }}</p>
 						<p><strong>Categoria:</strong></p>
-						<p class="">{{ course.category }}<span class="rating"><input type="hidden" value="{{ course.rating }}"/></span></p>
+						<p class="">{{ course.category }}
+
+							<span class="rating" ng-if="course.rating ==1">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>								
+							</span>
+
+							<span class="rating" ng-if="course.rating ==2">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>								
+							</span>
+
+							<span class="rating" ng-if="course.rating ==3">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star-empty'/>
+								<span class='glyphicon glyphicon-star-empty'/>								
+							</span>
+
+							<span class="rating" ng-if="course.rating ==4">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star-empty'/>								
+							</span>
+
+							<span class="rating" ng-if="course.rating ==5">
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>
+								<span class='glyphicon glyphicon-star'/>								
+							</span>																												
+						</p>
 					</div>
 				</div>
 				<div class="modal fade" id="{{course.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -84,15 +166,3 @@
 
 </div>
 
-
-<script>
-   $( window ).load(function() {
-      $(".rating input").each(function() {
-        var value = $( this ).val();
-        var i = 0;
-        for (; i < value; i++) { 
-          $( this ).after( "<span class='glyphicon glyphicon-star'/>" )
-        }
-      });      
-   });
-</script>
